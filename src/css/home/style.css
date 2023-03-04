@@ -1,0 +1,145 @@
+* {
+  paddind: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+video,
+canvas {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  /* display: none;*/
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 100%;
+  z-index: -1;
+  top: 0;
+}
+
+video {
+  display: none;
+}
+
+canvas {
+  z-index: -1;
+  opacity: 55%;
+  width: 80px;
+  right: 0;
+  height: 60px;
+}
+
+.alfabeto_container {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #353740;
+  padding: 1rem 0.5rem;
+  justify-content: center;
+  height: 100vh;
+  /* display: none; */
+}
+
+.alfabeto {
+  width: 65px;
+  height: 65px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.opcoes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0 0.5rem;
+}
+
+.especiais {
+  width: 100px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#ponto_ref {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.text_area {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+  justify-content: space-between;
+  position:relative;
+  /* background-color:#f7f7f8; */
+}
+
+.text {
+  width: 80%;
+  height: 70vh;
+  background-color: white;
+  resize: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: #ccc;
+  padding: 1rem;
+  font-size: 14px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.mouse {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 999px;
+}
+
+.sound {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  animation: move 0.5s infinite;
+  position:absolute;
+  left: 30px;
+  top: 30px;
+  display: none;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
