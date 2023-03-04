@@ -29,15 +29,23 @@ canvas {
   height: 60px;
 }
 
+.container {  
+  display: flex;
+  width: 100vw;
+  /* height: 100%; */
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
 .alfabeto_container {
   display: flex;
   width: 50%;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 16px;
   background-color: #353740;
   padding: 1rem 0.5rem;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   /* display: none; */
 }
 
@@ -57,8 +65,10 @@ canvas {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 1rem;
   padding: 0 0.5rem;
+  background-color: #353740;
+  height: fit-content;
 }
 
 .especiais {
@@ -68,7 +78,7 @@ canvas {
   display: flex;
   justify-content: center;
   text-align: center;
-  align-items: center;
+  align-items: center; 
 }
 
 #ponto_ref {
@@ -81,11 +91,6 @@ canvas {
   font-weight: bold;
 }
 
-.container {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-}
 
 .text_area {
   width: 50%;
@@ -95,9 +100,9 @@ canvas {
   align-items: center;
   padding: 1rem 0;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: center;
   position:relative;
-  /* background-color:#f7f7f8; */
+  /* background-color:#f7f7f8; */ 
 }
 
 .text {

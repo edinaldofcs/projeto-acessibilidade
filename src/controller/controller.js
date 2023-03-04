@@ -1,5 +1,4 @@
 import MeuFaceMesh from "../functions/faceMesh.js";
-
 export default class Controller {
   #view;
   #service;
