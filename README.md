@@ -1,5 +1,7 @@
 # Projeto de acessibilidade para pessoas com limitações de movimentos
 
+[Link do projeto](https://edinaldofcs.github.io/projeto-acessibilidade/)
+
 Utilizando API de reconhecimento facial, <a href = "https://github.com/tensorflow/tfjs-models/tree/master/face-landmarks-detection">face-landmarks-detection</a>, estou construindo este editor de textos que tem como finalidade, ajudar pessoas com dificuldade comunicação e locomoção. 
 
 <div style="width: 500px; height: 250px;">
