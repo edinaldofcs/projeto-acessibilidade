@@ -1,5 +1,7 @@
 # Projeto de acessibilidade para pessoas com limitações de movimentos
 
+[Link do projeto](https://edinaldofcs.github.io/projeto-acessibilidade/)
+
 Utilizando API de reconhecimento facial, <a href = "https://github.com/tensorflow/tfjs-models/tree/master/face-landmarks-detection">face-landmarks-detection</a>, estou construindo este editor de textos que tem como finalidade, ajudar pessoas com dificuldade comunicação e locomoção. 
 
 <div style="width: 500px; height: 250px;">
@@ -29,6 +31,6 @@ obs: há um ponto central na tela e o usuário deve posicionar o ponto da face c
   + olho esquerdo - "clica" nos botões
 
 
-## Exemplo de utilização
+## Exemplo de utilização (a abertura da boca está simulando o evento de clique)
 ![hitpaw-1677901007014](https://user-images.githubusercontent.com/61365646/222908290-bca4df4e-b687-4fb1-9e1a-03ba4de0002f.gif)
 
