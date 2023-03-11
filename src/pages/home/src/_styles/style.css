@@ -2,6 +2,8 @@
   paddind: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 video,
@@ -29,19 +31,27 @@ canvas {
   height: 60px;
 }
 
-.alfabeto_container {
+.container {  
+  display: flex;
+  width: 100vw;
+  /* height: 100%; */
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.alphabet_container {
   display: flex;
   width: 50%;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 16px;
   background-color: #353740;
   padding: 1rem 0.5rem;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   /* display: none; */
 }
 
-.alfabeto {
+.alphabet {
   width: 65px;
   height: 65px;
   background-color: white;
@@ -52,23 +62,25 @@ canvas {
   font-weight: bold;
 }
 
-.opcoes {
+.options {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 1rem;
   padding: 0 0.5rem;
+  background-color: #353740;
+  height: fit-content;
 }
 
-.especiais {
+.specialOptions {
   width: 100px;
   height: 60px;
   background-color: white;
   display: flex;
   justify-content: center;
   text-align: center;
-  align-items: center;
+  align-items: center; 
 }
 
 #ponto_ref {
@@ -81,11 +93,6 @@ canvas {
   font-weight: bold;
 }
 
-.container {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-}
 
 .text_area {
   width: 50%;
@@ -95,9 +102,9 @@ canvas {
   align-items: center;
   padding: 1rem 0;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: center;
   position:relative;
-  /* background-color:#f7f7f8; */
+  /* background-color:#f7f7f8; */ 
 }
 
 .text {
@@ -130,6 +137,24 @@ canvas {
   left: 30px;
   top: 30px;
   display: none;
+}
+
+.config_page{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: .5rem 1rem;
+  margin: 5px;
+  color: #000;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: .3s all;
+  z-index: 1;
+}
+
+.config_page:hover{
+  color: #fff;
+  background-color: #000;
 }
 
 @keyframes move {
