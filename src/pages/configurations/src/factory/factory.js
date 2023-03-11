@@ -1,6 +1,6 @@
 import Controller from "../controller/controller.js";
 import Service from "../service/service.js";
-import StorageService from "../service/storageServices.js";
+import StorageService from "../../../../global/storageServices.js";
 import View from "../view/view.js";
 
 const storageService = new StorageService()

@@ -1,4 +1,4 @@
-import MeuFaceMesh from "../../../../functions/faceMesh.js";
+import MeuFaceMesh from "../../../../global/faceMesh.js";
 
 export default class Controller {
   #view;

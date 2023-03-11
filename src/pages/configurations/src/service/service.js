@@ -1,4 +1,4 @@
-import { enableCounter } from "../../../../functions/config.js";
+import { enableCounter } from "../../../../global/config.js";
 
 export default class Service {
   constructor() {}
