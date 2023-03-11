@@ -1,9 +1,7 @@
 import Controller from "../../../home/src/controller/controller.js";
 import Service from "../../../home/src/service/service.js";
-import storageService from "../../../home/src/service/storageServices.js";
+import storageService from "../../../../global/storageServices.js";
 import View from "../../../home/src/view/view.js";
-
-console.log("aqui");
 
 const factory = {
   async initialize() {

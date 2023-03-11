@@ -1,4 +1,4 @@
-import { groups } from "../../../../functions/config.js";
+import { groups } from "../../../../global/config.js";
 
 export default class View {
   canvasCtx;
