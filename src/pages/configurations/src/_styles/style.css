@@ -1,7 +1,9 @@
 * {
-  padding: 0;
+  paddind: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -96,6 +98,7 @@ input[type="submit"]:hover {
   height: 15px;
   background-color: red;
   border-radius: 999px;
+  z-index: 1;
 }
 
 .activate{
@@ -109,4 +112,21 @@ input[type="submit"]:hover {
   z-index: 1;
   color: #000;
   text-align: center;
+}
+
+.config_page{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: .5rem 1rem;
+  margin: 5px;
+  color: #000;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: .3s all;
+}
+
+.config_page:hover{
+  color: #fff;
+  background-color: #000;
 }

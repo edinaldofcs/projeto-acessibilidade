@@ -2,6 +2,8 @@
   paddind: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 video,
@@ -135,6 +137,24 @@ canvas {
   left: 30px;
   top: 30px;
   display: none;
+}
+
+.config_page{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: .5rem 1rem;
+  margin: 5px;
+  color: #000;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: .3s all;
+  z-index: 1;
+}
+
+.config_page:hover{
+  color: #fff;
+  background-color: #000;
 }
 
 @keyframes move {
