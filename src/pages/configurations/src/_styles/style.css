@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 10px 20px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 form {
@@ -19,7 +19,7 @@ form {
   flex-direction: column;
   gap: 1.5rem;
   width: 30%;
-  height: 80%;
+  /* height: 80%; */
   padding: 10px 20px;
   background-color: #f7f7f7;
   border-radius: 5px;
@@ -112,6 +112,7 @@ input[type="submit"]:hover {
   z-index: 1;
   color: #000;
   text-align: center;
+  font-weight: bold;
 }
 
 .config_page{
@@ -129,4 +130,11 @@ input[type="submit"]:hover {
 .config_page:hover{
   color: #fff;
   background-color: #000;
+}
+
+.section{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 15px;
 }
