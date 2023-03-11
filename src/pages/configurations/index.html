@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+    <title>Editar Configurações</title>
+    <link rel="stylesheet" href="./src/_styles/style.css" />
+  </head>
+  <body>
+    <form id="form">
+      <div>
+        <h2>Olho Esquerdo</h2>
+        <input
+          type="range"
+          step="0.001"
+          name="leftEye-closed"
+          value="0.012"
+          min="0.005"
+          max="0.03"
+          id="left_eye"
+        />
+      </div>
+
+      <div>
+        <h2>Olho Direito</h2>
+        <input
+          type="range"
+          step="0.001"
+          name="rightEye-closed"
+          value="0.012"
+          min="0.005"
+          max="0.03"
+          id="right_eye"
+        />
+      </div>
+
+      <div>
+        <h2>Boca</h2>
+        <input
+          type="range"
+          step="0.001"
+          name="mouth-open"
+          value="0.06"
+          min="0.01"
+          max="0.1"
+          id="mouth_size"
+        />
+      </div>
+
+      <div>
+        <h2>Escolher seletor (mouse)</h2>
+        <div>
+          <div>
+            <label for="option-1">Boca</label>
+            <input type="radio" id="mouth" name="options" value="1" />
+          </div>
+          <div>
+            <label for="option-2">olhos</label>
+            <input type="radio" id="eyes" name="options" value="2" />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Sensibilidade eixo X</h2>
+        <input
+          type="range"
+          step="0.1"
+          name="x_axis"
+          value="2"
+          min="0.1"
+          max="8"
+          id="x_axis"
+        />
+      </div>
+      <div>
+        <h2>Sensibilidade eixo Y</h2>
+        <input
+          type="range"
+          step="0.1"
+          name="y_axis"
+          value="2"
+          min="0.1"
+          max="8"
+          id="y_axis"
+        />
+      </div>
+
+      <div>
+        <input type="submit" value="Restaura padrão" />
+      </div>
+    </form>
+    <div id="ponto_ref">.</div>
+    <canvas id="canvas" class="canvas"></canvas>
+    <video id="video" class="video"></video>
+    <div class="status"></div>
+    <div id="mouse" class="mouse"></div>
+    <div id="activate" class="activate"></div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

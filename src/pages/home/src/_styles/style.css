@@ -37,7 +37,7 @@ canvas {
   min-height: 100vh;
 }
 
-.alfabeto_container {
+.alphabet_container {
   display: flex;
   width: 50%;
   flex-wrap: wrap;
@@ -49,7 +49,7 @@ canvas {
   /* display: none; */
 }
 
-.alfabeto {
+.alphabet {
   width: 65px;
   height: 65px;
   background-color: white;
@@ -60,7 +60,7 @@ canvas {
   font-weight: bold;
 }
 
-.opcoes {
+.options {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -71,7 +71,7 @@ canvas {
   height: fit-content;
 }
 
-.especiais {
+.specialOptions {
   width: 100px;
   height: 60px;
   background-color: white;

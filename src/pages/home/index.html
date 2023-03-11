@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+    <link rel="stylesheet" href="./src/_styles/style.css" />
+  </head>
+
+  <body id="body">
+    <video id="video"></video>
+    <main class="container">
+      <section class="alphabet_container">
+        <button class="alphabet" value="A">A</button>
+        <button class="alphabet" value="B">B</button>
+        <button class="alphabet" value="C">C</button>
+        <button class="alphabet" value="D">D</button>
+        <button class="alphabet" value="E">E</button>
+        <button class="alphabet" value="F">F</button>
+        <button class="alphabet" value="G">G</button>
+        <button class="alphabet" value="H">H</button>
+        <button class="alphabet" value="I">I</button>
+        <button class="alphabet" value="J">J</button>
+        <button class="alphabet" value="K">K</button>
+        <button class="alphabet" value="L">L</button>
+        <button class="alphabet" value="M">M</button>
+        <button class="alphabet" value="N">N</button>
+        <button class="alphabet" value="O">O</button>
+        <button class="alphabet" value="P">P</button>
+        <button class="alphabet" value="Q">Q</button>
+        <button class="alphabet" value="R">R</button>
+        <button class="alphabet" value="S">S</button>
+        <button class="alphabet" value="T">T</button>
+        <button class="alphabet" value="U">U</button>
+        <button class="alphabet" value="V">V</button>
+        <button class="alphabet" value="W">W</button>
+        <button class="alphabet" value="X">X</button>
+        <button class="alphabet" value="Y">Y</button>
+        <button class="alphabet" value="Z">Z</button>
+        <button class="alphabet" value="Ç">Ç</button>
+        <button class="alphabet" value="Ã">Ã</button>
+        <button class="alphabet" value=", ">,</button>
+        <button class="alphabet" value=".">.</button>
+        <div class="options">
+          <button class="specialOptions" value=" ">ESPAÇO</button>
+          <button class="specialOptions" value="apagar">APAGAR</button>
+          <button class="specialOptions" value = "salvar">SALVAR</button>
+          <button class="specialOptions" value = "falar">FALAR</button>
+          <button class="specialOptions" value="limpar">LIMPAR</button>
+          <button class="specialOptions" value="frases">FRASES</button>
+          <button class="specialOptions" value="ir para">IR PARA</button>
+          <button class="specialOptions" value = "...">...</button>
+        </div>
+      </section>
+      <section class="text_area">
+        <h1>Digite seu texto</h1>
+        <p id="select"></p>
+        <span class="sound" id="sound">🔊</span>
+        <textarea
+          class="text"
+          name="text"
+          id="text"
+          placeholder="Seu texto aparecerá aqui"
+        ></textarea>
+      </section>
+    </main>
+    <canvas id="canvas" width="600px" height="400px"></canvas>
+    <div id="ponto_ref">.</div>
+    <div id="mouse" class="mouse"></div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

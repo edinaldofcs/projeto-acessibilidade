@@ -16,7 +16,7 @@ export default class MeuFaceMesh {
     this.faceMesh.setOptions({
       maxNumFaces: 1,
       refineLandmarks: true,
-      minDetectionConfidence: 0.8,
+      minDetectionConfidence: 0.5,
       minTrackingConfidence: 0.5,
     });
 

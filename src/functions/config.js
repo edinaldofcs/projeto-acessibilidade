@@ -1,41 +1,35 @@
-export const config = {
-  dois_olhos: {
-    fechado: 0.012,
-    aberto: 1,
-    intervalo: Date.now(),
+export var config = {
+  leftEye: {
+    closed: 0.012,
   },
-  olho_esquerdo: {
-    fechado: 0.012,
-    aberto: 1,
-    intervalo: Date.now(),
+  rightEye: {
+    closed: 0.012,
   },
-  olho_direito: {
-    fechado: 0.012,
-    aberto: 1,
-    intervalo: Date.now(),
+  mouth: {
+    open: 0.06,
+    interval: Date.now(),
   },
-  boca:{
-    aberta: 0.06,
-    intervalo: Date.now(),
-  },
-  intervalo: Date.now(),
+  interval: { interval: Date.now() },
+  isMouth: false,
+  sensibility: 3,
+  sensibilitX: 2,
 };
 
-export function destravar_contador() {
-  const result = Date.now() - config.intervalo > 1000;
+export function enableCounter(key) {
+  const result = Date.now() - config[key].interval > 800;
   if (result) {
-    config.intervalo = Date.now();
-    return true;
+    config[key].interval = Date.now();
   }
-  return false;
+
+  return result;
 }
 
-export const grupos = [
+export const groups = [
   ["A", "B", "C", "D", "E", "F"],
   ["G", "H", "I", "J", "K", "L"],
-  ["M", "N", "O", "P", "Q", 'R'],
+  ["M", "N", "O", "P", "Q", "R"],
   ["S", "T", "U", "V", "W", "X"],
-  ["Y", "Z", "Ç", "SS", "RR", "."],
-  ["ESPAÇO", "APAGAR", "SALVAR", "FALAR"],
-  ["LIMPAR", "FRASES", "IR PARA", "..."]
+  ["Y", "Z", "Ç", "Ã", ", ", "."],
+  [" ", "apagar", "salvar", "falar"],
+  ["limpar", "frases", "ir para", "..."],
 ];
