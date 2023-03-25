@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  text-decoration: none;
+  outline: none;  
+}
+  
+.button {
+  @apply 
+  shadow-sm 
+  border-2 
+  border-gray-300 
+  bg-gray-800 
+  text-white 
+  hover:bg-black
+  focus:bg-gray-300 
+  focus:text-black
+  focus:border-gray-700
+  truncate
+}
+
+.config_button {
+  @apply flex
+    flex-col
+    justify-center
+    items-center
+    p-2
+    pl-4
+    pr-4
+    border-2 
+    border-gray-300 
+    bg-gray-800 
+    text-white 
+    hover:bg-sky-900
+    max-w-[80px];
+}
+
+.text {
+  @apply w-[100%]
+    h-auto
+    p-2
+    resize-none
+    border-2
+    border-gray-200
+    rounded-md h-[50vh]
+    text-lg
+    sm:w-[80%];
+}
+
+.pressed {
+  @apply 
+  bg-red-400;
+}
+
+
+.mouse{
+  @apply 
+  fixed
+  bg-blue-300
+  w-[15px]
+  h-[15px] 
+  rounded-full 
+  z-10 top-0 
+  left-0
+  pointer-events-none
+}
+
+.active{
+  @apply  
+  bg-blue-700
+}
+
+i,span{
+  @apply  
+  pointer-events-none
+}
+
+.logo{
+  @apply
+  opacity-70 
+  p-0 
+  m-0 
+  h-[80px]
+}
+
+.pages{
+  @apply
+  w-[100%]
+  mb-4
+}

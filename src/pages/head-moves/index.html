@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a469fbf713.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <!--  -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <style>
+
+#video,
+#canvas {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  /* display: none;*/
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 100%;
+  z-index: -1;
+  top: 0;
+}
+
+#video {
+  display: none;
+}
+
+#canvas {
+  z-index: -1;
+  opacity: 55%;
+  width: 80px;
+  right: 0;
+  height: 60px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col justify-between h-[100vh] p-2">
+      <div
+        class="flex flex-col justify-between bg-gray-300 w-full sm:flex-row h-[50vh]"
+      >
+        <textarea
+          class="text"
+          placeholder="Seu texto aparecerá aqui!"
+          id="text"
+        ></textarea>
+        <div class="flex">
+          <button class="config_button config" id="canIclick">
+            <i class="fa fa-hand-pointer text-xl sm:text-3xl config" id="canIclick"></i>
+            <span id="canIclick" class="config">Clicar</span>
+          </button>
+          <button class="config_button config" id="speak">
+            <i class="fa fa-microphone text-xl sm:text-3xl config" id="speak"></i>
+            <span id="speak" class="config">Falar</span>
+          </button>
+          <button class="config_button config" id="config">
+            <i class="fa fa-gear text-xl sm:text-3xl config" id="config"></i>
+            <span class="config" id="config">Config</span>
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-14 bg-blue-200 h-[45vh] w-full">
+        <button class="button" data-option="1!-!">1</button>
+        <button class="button" data-option="2!-@">2</button>
+        <button class="button" data-option="3!-#">3</button>
+        <button class="button" data-option="4!-$">4</button>
+        <button class="button" data-option="5!-%">5</button>
+        <button class="button" data-option="6!-¨">6</button>
+        <button class="button" data-option="7!-&">7</button>
+        <button class="button" data-option="8!-*">8</button>
+        <button class="button" data-option="9!-(">9</button>
+        <button class="button" data-option="0!-)">0</button>
+        <button class="button" data-option="-!-_">-</button>
+        <button class="button" data-option="=!-+">=</button>
+        <button class="button col-span-2" id="backspace">Backspace</button>
+        <button class="button col-span-2" id="clear">LIMPAR</button>
+        <button class="button" data-option="q!-á">q</button>
+        <button class="button" data-option="w!-ã">w</button>
+        <button class="button" data-option="e!-à">e</button>
+        <button class="button" data-option="r!-â">r</button>
+        <button class="button" data-option="t!-é">t</button>
+        <button class="button" data-option="y!-ẽ">y</button>
+        <button class="button" data-option="u!-ê">u</button>
+        <button class="button" data-option="i!-í">i</button>
+        <button class="button" data-option="o!-ó">o</button>
+        <button class="button" data-option="p!-õ">p</button>
+        <button class="button col-span-2" id="enter">ENTER</button>
+        <button class="button col-span-2" id="shift">SHIFT</button>
+        <button class="button" data-option="a!-ô">a</button>
+        <button class="button" data-option="s!-ú">s</button>
+        <button class="button" data-option="d!-ü">d</button>
+        <button class="button" data-option="f!-&lbrace;">f</button>
+        <button class="button" data-option="g!-&rbrace;">g</button>
+        <button class="button" data-option="h!-[">h</button>
+        <button class="button" data-option="j!-]">j</button>
+        <button class="button" data-option="k!-\">k</button>
+        <button class="button" data-option="l!-|">l</button>
+        <button class="button" data-option="ç!-&lt;">ç</button>
+        <button class="button col-span-2" id="modify">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="button" data-option="z!-&gt;">z</button>
+        <button class="button" data-option="x!-,">x</button>
+        <button class="button" data-option="c!-.">c</button>
+        <button class="button" data-option="v!-:">v</button>
+        <button class="button" data-option="b!-;">b</button>
+        <button class="button" data-option="n!-/">n</button>
+        <button class="button" data-option="m!-?">m</button>
+        <button class="button col-span-7" id="space">SPACE</button>
+      </div>
+    </div>
+
+    <p class="mouse" id="mouse"></p>
+    <video id="video"></video>
+    <canvas id="canvas" width="600px" height="400px"></canvas>
+    
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acessibilidade</title>
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+
+  <body>
+    <header class="bg-white shadow sticky top-0 z-10">
+      <div
+        class="container mx-auto py-4 px-6 flex justify-between items-center"
+      >
+        <img
+          src="./src/img/keyboard.png"
+          alt="imagem de um olho e um teclado de computador"
+          class="logo"
+        />
+
+        <nav class="text-gray-800">
+          <a href="#home" class="mr-4">Início</a>
+          <a href="#about" class="mr-4">Sobre o projeto</a>
+          <a href="#contact" class="mr-4">Colabore</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto py-8">
+      <section class="mb-8" id="home">
+        <h1 class="text-5xl font-bold text-gray-800 text-center sm:px-4">
+          Acessibilidade para editor de textos
+        </h1>
+        <p class="text-gray-600 text-center mt-4 px-8">
+          Bem-vindo ao projeto de acessibilidade para edição de texto. Acredito
+          que a tecnologia deve estar disponível para todas as pessoas,
+          independentemente de suas limitações físicas. É por isso este editor
+          de texto foi especialmente projetado para atender às necessidades de
+          pessoas que enfrentam desafios físicos para digitar.
+        </p>
+      </section>
+
+      <section class="grid sm:grid-cols-1 gap-4 px-4 md:grid-cols-3">
+        <div
+          class="bg-white border shadow-lg rounded-lg p-4 flex flex-col justify-center items-center relative"
+        >
+          <img src="./src/img/screen.png" alt="Image 3" class="pages" />
+          <a
+            href="./src/pages/head-moves/index.html"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Acessar
+          </a>
+        </div>
+        <div
+          class="bg-white border shadow-lg rounded-lg p-4 flex flex-col justify-center items-center relative"
+        >
+          <img src="./src/img/screen.png" alt="Image 3" class="pages" />
+          <a
+            href="./src/pages/head-moves/index.html"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Acessar
+          </a>
+        </div>
+        <div
+          class="bg-white border shadow-lg rounded-lg p-4 flex flex-col justify-center items-center relative"
+        >
+          <img src="./src/img/screen.png" alt="Image 3" class="pages" />
+          <a
+            href="./src/pages/head-moves/index.html"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Acessar
+          </a>
+        </div>
+      </section>
+
+      <section class="mt-8 p-4" id="about">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Sobre o projeto</h2>
+        <p class="text-gray-600 mt-4">
+          todos os editores de texto utilizam serviços de rastreamento de
+          movimentos para permitir que pessoas com limitações físicas possam
+          digitar usando movimentos da cabeça, piscar de olhos ou movimentos
+          oculares. Essas tecnologias garantem que todas as pessoas possam
+          utilizar a tecnologia de forma eficiente e fácil, independentemente de
+          suas habilidades físicas.
+        </p>
+        <p class="text-gray-600 mt-4">
+          A ideia é garantir que todos possam utilizar a tecnologia de forma
+          eficiente e fácil, e continuarei trabalhando para desenvolver
+          funcinalidades que permitam o acesso e uso de recursos tecnológicos de
+          forma acessível e inclusiva.
+        </p>
+        <p class="text-gray-600 mt-4">
+          Este editor é altamente configurável, de forma a adaptar-se às
+          necessidades dos usuários.
+        </p>
+      </section>
+
+      <section class="border-t py-8" id="contact">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 flex flex-row justify-center">
+          <dl
+            class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10 text-center"
+          >
+            <div>
+              <dt class="text-lg leading-6 font-medium text-gray-900">Nome</dt>
+              <dd class="mt-2 text-base text-gray-500">
+                Edinaldo F. C. Santos
+              </dd>
+            </div>
+            <div>
+              <dt class="text-lg leading-6 font-medium text-gray-900">
+                GitHub
+              </dt>
+              <dd class="mt-2 text-base text-gray-500">
+                <a
+                  href="https://github.com/edinaldofcs/projeto-acessibilidade"
+                  class="text-blue-500 hover:text-indigo-900"
+                  >github.com/edinaldofcs</a
+                >
+              </dd>
+            </div>
+            <div>
+              <dt class="text-lg leading-6 font-medium text-gray-900">
+                LinkedIn
+              </dt>
+              <dd class="mt-2 text-base text-gray-500">
+                <a
+                  href="https://www.linkedin.com/in/edinaldofcs-dev/"
+                  class="text-blue-500 hover:text-indigo-900"
+                  >linkedin.com/in/edinaldofcs-dev</a
+                >
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-800 text-gray-300">
+      <div class="container mx-auto py-4 px-6 flex justify-center items-center">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>
