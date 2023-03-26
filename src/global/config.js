@@ -5,14 +5,12 @@ export var config = {
   rightEye: {
     closed: 0.012,
   },
-  mouth: {
-    open: 0.06,
-    interval: Date.now(),
-  },
   interval: { interval: Date.now() },
-  isMouth: false,
-  sensibility: 3,
+  sensibilitY: 3,
   sensibilitX: 2,
+  compensationX: 0,
+  compensationY: 0,
+  timer: 2
 };
 
 export function enableCounter(key) {

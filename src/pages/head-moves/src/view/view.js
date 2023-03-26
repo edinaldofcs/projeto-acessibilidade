@@ -1,7 +1,7 @@
 export default class View {
   canvasCtx;
 
-  constructor(mouse, keyboard) {
+  constructor(mouse) {
     this.canvas = document.getElementById("canvas");
     this.canvasCtx = this.canvas.getContext("2d");
     this.mouse = mouse

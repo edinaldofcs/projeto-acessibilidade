@@ -1,5 +1,5 @@
 export default class AnimationService {
-  constructor(progressCallback) {
+  constructor(progressCallback, storageService) {
     this.canvas = document.createElement("canvas");
     this.setAttributes();
     document.body.appendChild(this.canvas);
@@ -14,6 +14,7 @@ export default class AnimationService {
     this.previous = "";
     this.next = "";
     this.activateButtons = true;
+    this.storageService = storageService;
   }
 
   setAttributes() {
@@ -28,8 +29,9 @@ export default class AnimationService {
   }
 
   draw() {
+    this.storageService.getStorageConfig();
     const timeElapsed = new Date().getTime() - this.startTime;
-    const progress = timeElapsed / 2000;
+    const progress = timeElapsed / (this.storageService.storage.timer * 1000);
 
     if (progress > 1) {
       clearInterval(this.animationInterval);

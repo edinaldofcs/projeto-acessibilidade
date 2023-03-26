@@ -4,12 +4,11 @@
 
 * {
   text-decoration: none;
-  outline: none;  
+  outline: none;
 }
-  
+
 .button {
-  @apply 
-  shadow-sm 
+  @apply shadow-sm 
   border-2 
   border-gray-300 
   bg-gray-800 
@@ -18,7 +17,7 @@
   focus:bg-gray-300 
   focus:text-black
   focus:border-gray-700
-  truncate
+  truncate;
 }
 
 .config_button {
@@ -50,43 +49,42 @@
 }
 
 .pressed {
-  @apply 
-  bg-red-400;
+  @apply bg-red-400;
 }
 
-
-.mouse{
-  @apply 
-  fixed
+.mouse {
+  @apply fixed
   bg-blue-300
   w-[15px]
   h-[15px] 
   rounded-full 
   z-10 top-0 
   left-0
-  pointer-events-none
+  pointer-events-none;
 }
 
-.active{
-  @apply  
-  bg-blue-700
+.active {
+  @apply bg-blue-700;
 }
 
-i,span{
-  @apply  
-  pointer-events-none
+i,
+span {
+  @apply pointer-events-none;
 }
 
-.logo{
-  @apply
-  opacity-70 
+.logo {
+  @apply opacity-70 
   p-0 
   m-0 
-  h-[80px]
+  h-[80px];
 }
 
-.pages{
-  @apply
-  w-[100%]
-  mb-4
+.pages {
+  @apply w-[100%]
+  mb-4;
+}
+
+.revert {
+  @apply 
+  transform -scale-x-100
 }

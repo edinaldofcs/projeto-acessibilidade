@@ -1,6 +1,5 @@
-import { enableCounter } from "../../../../global/config.js";
 
-export default class Service {
+export default class HeadService {
   constructor() {}
 
   mouseHead(landmarks, config) {

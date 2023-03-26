@@ -1,17 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a469fbf713.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../../styles/main.css" />
   </head>
-  <body>
-    <h1
-      class="fixed text-5xl font-bold left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+  <body class="p-4 bg-gray-100">
+    <div class="w-fit h-fit fixed top-4 left-4">
+      <a
+        href="/src/pages/head-moves/index.html"
+        class="bg-blue-700 rounded text-white px-4 py-2"
+        >Voltar</a
+      >
+    </div>
+    <form
+      id="form"
+      class="border-2 shadow-lg p-6 rounded-md min-w-[250px] flex flex-col gap-4 bg-white fixed bottom-4 right-4"
     >
-      Em Manutenção!
-    </h1>
+      <div class="grid grid-cols-2 gap-4" id="container">
+        <!-- ADICIONADO VIA JS -->
+      </div>
+    </form>
+    <div class="flex flex-col justify-between h-[100vh] p-2">
+      <div
+        class="grid grid-cols-14 bg-blue-200 h-[45vh] w-full"
+        id="button_container"
+      >
+        <!-- Adicionado via js -->
+      </div>
+      <div
+        class="flex flex-col justify-between bg-gray-300 w-full sm:flex-row h-[50vh]"
+        id="config_container"
+      >
+        <textarea
+          class="text"
+          placeholder="Seu texto aparecerá aqui!"
+          id="text"
+        ></textarea>
+        <div class="flex"></div>
+      </div>
+    </div>
+    <p class="mouse" id="mouse"></p>
+    <video
+      id="video"
+      class="w-full h-full fixed top-0 -z-[1] revert hidden"
+    ></video>
+    <canvas
+      id="canvas"
+      width="600px"
+      height="400px"
+      class="-z-[1] opacity-50 w-[80px] h-[60px] right-0 revert hidden"
+    ></canvas>
+    
+    <script src="index.js" type="module"></script>
   </body>
 </html>

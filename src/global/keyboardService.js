@@ -1,5 +1,9 @@
+import { createButtons } from "./helper/create-keyboard.js";
+import { buttons } from "./helper/keyType.js";
+
 export default class KeyboarService {
   constructor(canvas) {
+    createButtons(buttons)
     this.buttonText = document.querySelectorAll("[data-option]");
     this.modify = document.getElementById("modify");
     this.textArea = document.getElementById("text");
@@ -77,7 +81,7 @@ export default class KeyboarService {
 
     document.querySelectorAll("#config").forEach((element) => {
       element.addEventListener("click", () => {
-        window.location.href = "../config/index.html"
+        window.location.href = "../config/index.html?page=head"
       });
     });
   }
@@ -113,7 +117,7 @@ export default class KeyboarService {
       let character = element.innerHTML;
       if (character == "&lt;" || character == "&gt;") return;
 
-      character = character.toLowerCase();
+      element.innerHTML = character.toLowerCase();
     });
   }
 

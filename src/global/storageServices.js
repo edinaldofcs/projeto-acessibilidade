@@ -1,4 +1,4 @@
-import { config } from "../global/config.js";
+import { config } from "./config.js";
 
 export default class StorageService {
   storage;
